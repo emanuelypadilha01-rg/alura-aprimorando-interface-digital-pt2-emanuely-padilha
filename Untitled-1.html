@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Tech</title>
+    <link rel="stylesheet" href="style.css"
+    <style>
+         background-color: blue;
+            color : black;
+            text-align : center;
+            max-width : 800px;
+            margin : 0 auto;
+            padding : 16px;
+    
+        main{
+            background-color: rgba(72, 131, 233);
+            color: black;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        
+        article{
+            display: flex;
+        }
+        img{
+            width: 88px;
+            height: 88px;
+        }
+        .aricle-autor{
+            font-weight: bold;
+        }
+        .direitos{
+            text-align: center;
+            color: rgb(0, 0, 84)
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <h1> meu blog de maquiagem</h1>
+        <p> Compartilhamento de conhecimentoso sobre maquiagem,preparação de pele e etc.</p>
+    </header>
+    <main>
+    <article>
+      <img src="imagem.blog.png">
+      <div>
+      <p class="artigo-autor">meu primeiro</p>
+      <p>por: emanuely</p>
+      <h2>Meu primeiro post</h2>
+      <p>Boas vindas ao meu blog de maquiagem</p>
+      <button>❤️<span>0</span></button>
+      <button>👍🏼<span>0</span></button>
+    </div>
+    </article>
+
+    <article> 
+        <img src="imagem.blog.png">
+        <div>
+         <p class="autor-post">como fazer a maquiagem perfeita!</p>
+         <P>por: emanuely </P>
+         <p> Meu primeiro post</p> 
+         <p>Boas vindas ao meu blog de maquiagem</p>
+         <ul> 
+           <li>hidrate a pele, e use primer</li>
+           <li>utilize uma base do seu tom de pele</li>
+           <li>você pode usar ou um corretivo de um tom mais claro ou um do seu tom</li>
+           <li>sele a pele com pó solto</li>
+            <li>passe um blush na maça do rosto</li>
+             <li>passe rimel nos cilios superiores e inferiores</li>
+              <li>passe um hidratante de boca e um gloss para finalizar</li>
+         </ul>
+         <button>❤️<span>0</span></button>
+         <button>👍🏼<span>0</span></button> 
+        </div>
+    </article>
+    
+<article>
+      <img src="terceiro.png">
+      <div>
+      <p class="artigo-autor">conversores Maquiagem simples monocromática: o guia completo para o look perfeito</p>
+      <p>por: emanuely</p>
+      <h2>Meu primeiro post</h2>
+      <p>Se você está dando os primeiros passos na maquiagem ou quer renovar o visual 
+        com um look moderno e cheio de estilo, a maquiagem monocromática é a resposta. 
+        Neste guia completo, você aprende a combinar cores do mesmo tom 
+        em olhos, bochechas e lábios com produtos Maybelline para criar makes que 
+        realçam a sua beleza natural de um jeito simples e encantador.
+    </p>
+    <p class="artigo-fonte">Fonte: <a href="https://www.maybelline.com.br/dicas-de-maquiagem/tendencias/maquiagem-simples-monocromatica">
+    </a>Maybelline</p>
+      <button>❤️<span>0</span></button>
+      <button>👍🏼<span>0</span></button>
+    </div>
+    </article></main>
+    <footer>
+      <p class="direito">os direitos estão reservados ao blog - emanuely padilha </p>
+    </footer>
+</body>
+<script>
+    const botoes =document.querySelectorAll("button");
+
+    botoes.forEach(function(botao)) {
+        let curtiu = false;
+        botao.addEventListenner("click", botaoClicado);
+
+        function botaoClicado(){
+console.log("fui clicado");
+let texto = botao.querySelectorAll("span");
+
+if(curtiu===false){
+    texto.textContent++;
+    curtiu=true;
+}else{
+    texto.textContent--;
+    curtiu=false;
+}
+        }
+    };
+    </script>
+
+</html>
