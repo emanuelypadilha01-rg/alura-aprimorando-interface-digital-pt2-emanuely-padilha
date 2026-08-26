@@ -1,45 +1,98 @@
-body { max-width: 100vw;
+/* Configuração Geral da Página */
+body {
+    max-width: 100vw;
+    margin: 0;
+    padding: 20px;
+    background-color: #FDFBF7; /* Bege de fundo */
+    color: #2D3748; /* Texto escuro e legível */
+    font-family: Arial, sans-serif;
 }
-header {
-       
-    background-color: rgba(11,109,109,0.738);
-            color : black;
-            text-align : center;
-            max-width : 800px;
-            margin : 0 auto;
-            padding : 16px;
-    
-        main{
-            display: flex;
-            flex-wrap: wrap;
-            background-color: rgba(72, 131, 233);
-            color: black;
-            margin: 0 auto;
-            padding: 16px;
-        }
-        
-        article{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            border: 1px solid darkblue;
-            margin: 16px;
-            gap: 16px;
-            padding: 16px;
-            flex: 1 1 25%;
 
-        }
-        img{
-            width: 88px;
-            height: 88px;
-        }
-        .aricle-autor{
-            font-weight: bold;
-        }
-        .direitos{
-            text-align: center;
-            color: rgb(0, 0, 84)
-        }
-    }
+/* Cabeçalho */
+header {
+    background-color: #1A365D; /* Azul escuro */
+    color: #FFFFFF; /* Texto branco */
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto 24px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Container Principal dos Artigos */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto; 
+    padding: 16px;
+    gap: 16px; /* Espaçamento organizado entre os cartões */
+}
+
+/* Cartões de Artigos */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #F7F4EF; /* Bege suave para o cartão */
+    border: 1px solid #E2D9CC; /* Borda bege suave */
+    border-top: 4px solid #2B6CB0; /* Destaque azul na borda superior */
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(26, 54, 93, 0.08); /* Sombra suave em tom azulado */
+    width: calc(33.333% - 16px); /* 3 colunas em telas grandes */
+    min-width: 250px; /* Garante que não fique espremido em telas menores */
+}
+
+/* Imagens dos Artigos (80px x 80px) */
+img {
+    width: 80px; 
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* Título e Destaque do Autor */
+.artigo-autor {
+    font-weight: bold;
+    color: #1A365D; /* Azul escuro */
+    margin-bottom: 8px;
+}
+
+/* Estilização dos Botões de Curtida */
+button {
+    background-color: #EBF8FF; /* Azul bem claro */
+    color: #1A365D;
+    border: 1px solid #2B6CB0;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2B6CB0; /* Azul médio ao passar o mouse */
+    color: #FFFFFF;
+}
+
+/* Rodapé */
+footer {
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+    background-color: #1A365D;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.direitos {
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+}
